@@ -4,8 +4,6 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "k6 run loadtest.js",
-    "open": "k6 dashboard",
     "docker:setup": "docker run --rm -u $(id -u) -v $PWD:/app -w /app grafana/k6 new",
     "docker:run": "docker run --add-host=host.docker.internal:host-gateway -i grafana/k6 run - <script.js"
   },
